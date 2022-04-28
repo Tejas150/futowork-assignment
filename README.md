@@ -63,7 +63,7 @@ mobile,name,city
 
 ### My solution
 
-To create the api endpoint, firstly I created a basic server.  
+To create the api endpoint, firstly I created a server which will listen to the client requests.  
 
 After this my solution is mainly divided in 3 parts:  
 
