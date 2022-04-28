@@ -126,3 +126,9 @@ app.get('/customer-data', (req, res) => {
     res.end(JSON.stringify(customer_data.result, null, 4));  
 })  
   
+### Extras
+1) I have used camel case naming conventions wherever possible and named the variable and functions meaningfully.
+2) I have kept the folder structure organized.
+
+#### Thank You for giving me this opportunity
+![f9dd3039ca06a501c63863d2be445a29](https://user-images.githubusercontent.com/54750457/165849058-708bd16d-2eb0-4bfe-96f8-0dc6bc79b087.gif)
