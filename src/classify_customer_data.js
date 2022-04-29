@@ -4,11 +4,8 @@ const fs = require('fs')
 const csv = fs.readFileSync('../customer_data.csv')
 
 let csvArray = []
-let unique = []
-let duplicate = []
-let duplicateMobileNumbers = new Map();
 
-const convertCSVToArray = (data, delimiter = ',') => {
+const convertCsvToArray = (data, delimiter = ',') => {
     const header = data.slice(0, data.indexOf('\n')).toString().split(delimiter);
     const rows = data.slice(data.indexOf('\n') + 1).toString().split('\n');
     return rows.map(row => {
@@ -17,8 +14,12 @@ const convertCSVToArray = (data, delimiter = ',') => {
     });
 };
 
-csvArray = convertCSVToArray(csv);
+csvArray = convertCsvToArray(csv);
 
+
+let unique = []
+let duplicate = []
+let duplicateMobileNumbers = new Map();
 
 csvArray.forEach((obj) => {
     if(duplicateMobileNumbers.has(obj.mobile)) {
@@ -31,7 +32,7 @@ csvArray.forEach((obj) => {
 })
 
 const result = {
-    Processed : unique,
+    processed : unique,
     unprocessed : duplicate
 }
 
